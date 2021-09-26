@@ -44,4 +44,8 @@ public class ClientesAPI {
 		clientesDAO.save(clientes);
 	}
 	
+	@GetMapping("/buscarId/{id}")
+	public List<Clientes> listarId(@PathVariable("id") Long id){
+	return clientesDAO.findAll();
+	}
 }
